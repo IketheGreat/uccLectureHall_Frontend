@@ -15,7 +15,6 @@ const Swlt = () => {
   const [startTime, setStartTime] = useState("");
   const [endTime, setEndTime] = useState("");
   const [bookingSuccess, setBookingSuccess] = useState(false);
-  const [unBookingSuccess, setUnbookingSuccess] = useState(false);
   const [SWLTLecture, setSWLTLecture] = useState([]);
 
   //connect to the backend
@@ -112,7 +111,7 @@ const Swlt = () => {
     }
 
     try {
-      const response = await axios.post(
+        await axios.post(
         `https://ucclecturehall-api.onrender.com/api/swlt/unbook/${id}`,
         {
           lectureHallName: selectedLectureHall.name,

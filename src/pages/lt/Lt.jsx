@@ -15,7 +15,6 @@ const LT = () => {
   const [startTime, setStartTime] = useState("");
   const [endTime, setEndTime] = useState("");
   const [bookingSuccess, setBookingSuccess] = useState(false);
-  const [unBookingSuccess, setUnbookingSuccess] = useState(false);
   const [LtLecture, setLtLecture] = useState([]);
 
   // connect to the backend
@@ -113,7 +112,7 @@ const LT = () => {
     }
 
     try {
-      const response = await axios.post(
+        await axios.post(
         `https://ucclecturehall-api.onrender.com/api/lt/unbook/${id}`,
         {
           lectureHallName: selectedLectureHall.name,

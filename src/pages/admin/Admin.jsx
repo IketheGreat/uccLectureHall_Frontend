@@ -39,7 +39,9 @@ const Admin = () => {
           "https://ucclecturehall-api.onrender.com/api/users/find"
         );
         setUsers(res.data);
-      } catch (error) {}
+      } catch (error) {
+        console.log(error)
+      }
     };
 
     getUsers();

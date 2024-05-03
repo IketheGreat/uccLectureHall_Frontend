@@ -15,7 +15,6 @@ const Calc = () => {
   const [startTime, setStartTime] = useState("");
   const [endTime, setEndTime] = useState("");
   const [bookingSuccess, setBookingSuccess] = useState(false);
-  const [unBookingSuccess, setUnbookingSuccess] = useState(false);
   const [CalcLecture, setCalcLecture] = useState([]);
 
   //connect to the backend
@@ -80,7 +79,7 @@ const Calc = () => {
     }
 
     try {
-      const response = await axios.post(
+         await axios.post(
         `https://ucclecturehall-api.onrender.com/api/calc/book/${id}`,
         {
           lectureHallName: selectedLectureHall.name,
@@ -112,7 +111,7 @@ const Calc = () => {
     }
 
     try {
-      const response = await axios.post(
+        await axios.post(
         `https://ucclecturehall-api.onrender.com/api/calc/unbook/${id}`,
         {
           lectureHallName: selectedLectureHall.name,

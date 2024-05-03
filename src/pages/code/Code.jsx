@@ -14,7 +14,6 @@ const Code = () => {
   const [startTime, setStartTime] = useState("");
   const [endTime, setEndTime] = useState("");
   const [bookingSuccess, setBookingSuccess] = useState(false);
-  const [unBookingSuccess, setUnbookingSuccess] = useState(false);
   const [CodeLecture, setCodeLecture] = useState([]);
 
   useEffect(() => {
@@ -109,7 +108,7 @@ const Code = () => {
     }
 
     try {
-      const response = await axios.post(
+        await axios.post(
         `https://ucclecturehall-api.onrender.com/api/code/unbook/${id}`,
         {
           lectureHallName: selectedLectureHall.name,

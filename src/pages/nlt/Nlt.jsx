@@ -15,7 +15,6 @@ const Nlt = () => {
   const [startTime, setStartTime] = useState("");
   const [endTime, setEndTime] = useState("");
   const [bookingSuccess, setBookingSuccess] = useState(false);
-  const [unBookingSuccess, setUnbookingSuccess] = useState(false);
   const [NLTLecture, setNltLecture] = useState([]);
 
   useEffect(() => {
@@ -111,7 +110,7 @@ const Nlt = () => {
     }
 
     try {
-      const response = await axios.post(
+        await axios.post(
         `https://ucclecturehall-api.onrender.com/api/nlt/unbook/${id}`,
         {
           lectureHallName: selectedLectureHall.name,

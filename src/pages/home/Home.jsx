@@ -1,6 +1,5 @@
 import Sidebar from "../../components/sidebar/Sidebar";
 import "./home.scss";
-import Background from "../../img/vh.jpg";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../footer/Footer";
 import { useState } from "react";
